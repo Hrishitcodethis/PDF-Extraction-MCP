@@ -77,6 +77,7 @@ source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+```
 Be sure to set the environment variables listed below 👇
 
 ## Environment Variables
@@ -96,17 +97,20 @@ Set these via a `.env` file, shell exports, or through your platform’s UI/envi
 ### Starting MCP Servers
 
 ```bash
-./start_mcp_servers.sh```
+./start_mcp_servers.sh
+```
 
 ### Streamlit UI
 
 ```bash
 streamlit run app_streamlit.py
+```
 
 ### Command-line Interface (CLI)
 
 ```bash
 python cli.py
+```
 
 ## Project Structure
 ├── app_streamlit.py # Streamlit-based user interface
