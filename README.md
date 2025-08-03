@@ -96,7 +96,7 @@ Set these via a `.env` file, shell exports, or through your platform’s UI/envi
 ### Starting MCP Servers
 
 ```bash
-./start_mcp_servers.sh
+./start_mcp_servers.sh```
 
 ### Streamlit UI
 
