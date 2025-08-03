@@ -1,4 +1,4 @@
-# MCP PDF Assistant 📄🤖
+# MCP PDF Assistant
 
 A modular, microservice-based PDF Assistant leveraging **Machine Control Protocol (MCP)** microservices for robust PDF **extraction, chunking, embedding, vector storage**, **QnA**, and **summarization**.
 
@@ -6,7 +6,7 @@ Built with **modularity**, **observability**, and **extensibility** in mind. Off
 
 ---
 
-## 📚 Table of Contents
+## Table of Contents
 
 - [Features](#features)
 - [Architecture & Components](#architecture--components)
@@ -24,18 +24,18 @@ Built with **modularity**, **observability**, and **extensibility** in mind. Off
 
 ---
 
-## 🚀 Features
+## Features
 
-- ✅ **Modular MCP microservices** for extraction, chunking, embedding, and vector storage.
-- 💬 **QnA & Summarization** powered by Retrieval-Augmented Generation (RAG) + fallback LLMs.
-- 🖥️ **Streamlit UI** for no-code operation.
-- 🛠️ **CLI** for scripting and automation workflows.
-- 📈 **Observability** via OpenTelemetry and Arize Phoenix.
-- 🧱 **Highly modular pipeline** for easy extension and debugging.
+- **Modular MCP microservices** for extraction, chunking, embedding, and vector storage.
+- **QnA & Summarization** powered by Retrieval-Augmented Generation (RAG) + fallback LLMs.
+- **Streamlit UI** for no-code operation.
+- **CLI** for scripting and automation workflows.
+- **Observability** via OpenTelemetry and Arize Phoenix.
+- **Highly modular pipeline** for easy extension and debugging.
 
 ---
 
-## 🧩 Architecture & Components
+## Architecture & Components
 
 | Component         | Responsibility                                          |
 |------------------|----------------------------------------------------------|
@@ -52,7 +52,7 @@ Built with **modularity**, **observability**, and **extensibility** in mind. Off
 
 ---
 
-## 🔁 Workflow
+## Workflow
 
 1. **Upload PDF** → Upload document via UI or CLI.
 2. **Extraction** → Extract text & metadata using `extractor`.
@@ -64,7 +64,7 @@ Built with **modularity**, **observability**, and **extensibility** in mind. Off
 
 ---
 
-## ⚙️ Setup & Installation
+## Setup & Installation
 
 ```bash
 # Clone the repo
@@ -77,3 +77,74 @@ source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+Be sure to set the environment variables listed below 👇
+
+## Environment Variables
+
+| Variable           | Description                                              |
+|-------------------|----------------------------------------------------------|
+| `PHOENIX_ENDPOINT`| Arize Phoenix collector endpoint                         |
+| `PHOENIX_API_KEY` | *(Optional)* API key for Arize Phoenix                   |
+| `OPENAI_API_KEY`  | API key for OpenAI models (embedding and generation)     |
+
+Set these via a `.env` file, shell exports, or through your platform’s UI/environment config.
+
+---
+
+## Usage
+
+### Starting MCP Servers
+
+```bash
+./start_mcp_servers.sh
+
+### Streamlit UI
+
+```bash
+streamlit run app_streamlit.py
+
+### Command-line Interface (CLI)
+
+```bash
+python cli.py
+
+## Project Structure
+├── app_streamlit.py # Streamlit-based user interface
+├── cli.py # CLI-based interface
+├── modules/ # Pipeline orchestration logic
+├── server/ # All microservices (extractor, chunker, etc.)
+├── start_mcp_servers.sh # Launches all microservice servers
+├── requirements.txt # Python dependencies
+
+## Extensibility & Observability
+
+- **Pluggable Microservices**: Easily add or swap extractors, embedders, chunkers, and vector stores to fit your specific use case.
+- **Telemetry Everywhere**: Integrated with OpenTelemetry and Arize Phoenix for full pipeline observability, tracing, and performance debugging.
+- **Unified Backend**: Both the Streamlit UI and CLI utilize the same modular backend, ensuring consistency across interfaces and deployment modes.
+
+---
+
+## Future Enhancements
+
+- **Support for additional LLM providers** (e.g., Claude, Gemini, Mistral, local models)
+- **Smarter chunking strategies** based on document layout, hierarchy, and semantics
+- **Configurable pipelines** tailored for research, enterprise, and regulatory use cases
+- **Multi-document summarization** (both extractive & abstractive)
+- **Real-time collaboration**: Annotation, comments, and shared document review in UI
+- **Cloud-ready deployments** via Docker Compose and Kubernetes
+- **Extended vector DB support**: Pinecone, Weaviate, Qdrant, and more
+- **Enterprise-grade security**: Role-based access, auth systems, and compliance features
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](./LICENSE) file for more details.
+
+---
+
+## Why MCP PDF Assistant?
+
+> A fast, modular, and observable PDF intelligence pipeline powered by microservices and advanced LLMs.  
+> Built for researchers, developers, and enterprise teams who need reliability, flexibility, and insight-driven automation.
