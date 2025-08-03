@@ -66,8 +66,6 @@ Built with **modularity**, **observability**, and **extensibility** in mind. Off
 
 ## Setup & Installation
 
-## Setup & Installation
-
 ```bash
 # Clone the repo
 git clone https://github.com/Hrishitcodethis/PDF-Extraction-MCP.git
@@ -79,7 +77,6 @@ source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-
 Be sure to set the environment variables listed below 👇
 
 ## Environment Variables
