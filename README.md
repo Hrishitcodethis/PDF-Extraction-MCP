@@ -66,10 +66,12 @@ Built with **modularity**, **observability**, and **extensibility** in mind. Off
 
 ## Setup & Installation
 
+## Setup & Installation
+
 ```bash
 # Clone the repo
-git clone https://github.com/AdityaK75/pdf-extraction-mcp.git
-cd pdf-extraction-mcp/mcp-pdf-ectractor
+git clone https://github.com/Hrishitcodethis/PDF-Extraction-MCP.git
+cd PDF-Extraction-MCP
 
 # Setup virtual environment
 python3 -m venv .venv
@@ -77,6 +79,7 @@ source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
+
 Be sure to set the environment variables listed below 👇
 
 ## Environment Variables
