@@ -1,6 +1,6 @@
 # MCP PDF Assistant
 
-A modular, microservice-based PDF Assistant leveraging **Machine Control Protocol (MCP)** microservices for robust PDF **extraction, chunking, embedding, vector storage**, **QnA**, and **summarization**.
+A modular, microservice-based PDF Assistant leveraging **Model Context Protocol (MCP)** microservices for robust PDF **extraction, chunking, embedding, vector storage**, **QnA**, and **summarization**.
 
 Built with **modularity**, **observability**, and **extensibility** in mind. Offers both **CLI** and **Streamlit UI**. Powered by **OpenTelemetry** and **Arize Phoenix** for advanced monitoring and debugging.
 
